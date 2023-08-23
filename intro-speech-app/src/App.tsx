@@ -3,6 +3,7 @@ import SpeechToText from "./components/Proper/SpeechToText";
 import TextToSpeech from "./components/Proper/TextToSpeech";
 import SpeechToTextBasic from "./components/Basic/SpeechToTextBasic";
 import TextToSpeechBasic from "./components/Basic/TextToSpeechBasic";
+import AntidoteChirp from "./components/Basic/Chirp";
 
 export type SpeechOptions = {
   speechKey: string;
@@ -16,6 +17,7 @@ const AppBasic = () => {
       <h1 className="text-center">Intro to Speech Service</h1>
       <SpeechToTextBasic />
       <TextToSpeechBasic />
+      <AntidoteChirp />
     </main>
   );
 };
@@ -23,8 +25,8 @@ const AppBasic = () => {
 // The proper setup
 const App = () => {
   const [speechOptions, setSpeechOptions] = useState<SpeechOptions>({
-    speechKey: "",
-    speechRegion: "",
+    speechKey: "a653c6ef0384423db1680447b9a74c8c",
+    speechRegion: "eastus",
   });
 
   useEffect(() => {
@@ -40,8 +42,9 @@ const App = () => {
   return (
     <main className="flex min-h-screen w-full flex-col justify-between px-4 py-24 mx-auto prose">
       <h1 className="text-center">Intro to Speech Service</h1>
-      <SpeechToText speechOptions={speechOptions} />
-      <TextToSpeech speechOptions={speechOptions} />
+      <SpeechToTextBasic />
+      <TextToSpeechBasic />
+      <AntidoteChirp />
     </main>
   );
 };

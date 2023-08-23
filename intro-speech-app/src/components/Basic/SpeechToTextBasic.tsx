@@ -8,8 +8,8 @@ import {
 
 // Configs
 const speechConfig = SpeechConfig.fromSubscription(
-  "<SUBSCRIPTION_KEY>",
-  "<REGION>"
+  "a653c6ef0384423db1680447b9a74c8c",
+  "eastus"
 );
 const audioConfig = AudioConfig.fromDefaultMicrophoneInput();
 const speechRecognizer = new SpeechRecognizer(speechConfig, audioConfig);
